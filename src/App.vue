@@ -39,17 +39,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-pre {
-  display: block;
-  width: 50%;
-  text-align: left;
 }
 
 button,

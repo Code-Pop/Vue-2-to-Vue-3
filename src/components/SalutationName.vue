@@ -1,22 +1,24 @@
 <template>
-  <select name="salutation" @change="$emit('update:salutation', $event.target.value)">
-    <option value="">-</option>
-    <option
-      v-for="slt of salutations"
-      :value="slt"
-      :key="slt"
-      :selected="salutation === slt"
-    >
-      {{ slt }}
-    </option>
-  </select>
+  <div>
+    <select name="salutation" @change="$emit('update:salutation', $event.target.value)">
+      <option value="">-</option>
+      <option
+        v-for="item of salutations"
+        :value="item"
+        :key="item"
+        :selected="salutation === item"
+      >
+        {{ item }}
+      </option>
+    </select>
 
-  <input
-    :value="name"
-    @input="$emit('update:name', $event.target.value)"
-    type="text"
-    name="name"
-  />
+    <input
+      :value="name"
+      @input="$emit('update:name', $event.target.value)"
+      type="text"
+      name="name"
+    />
+  </div>
 </template>
 
 <script>
@@ -29,7 +31,6 @@ const salutations = [
 ]
 
 export default {
-  emits: ['update:salutation', 'update:name'],
   props: {
     salutation: {
       type: String,
@@ -49,6 +50,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
 select {
   margin-right: 0.5rem;
 }
