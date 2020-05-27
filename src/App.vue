@@ -2,7 +2,7 @@
   <div id="app">
     <SalutationName
       v-model:salutation.capitalize="form.salutation"
-      v-model:name.capitalize="form.name"
+      v-model:name.capitalize.reverse="form.name"
     />
 
     <pre>{{ form }}</pre>
