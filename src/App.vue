@@ -27,6 +27,10 @@ export default {
   margin-top: 60px;
 }
 
+pre {
+  font-size: 1.5rem;
+}
+
 button,
 label,
 input,
