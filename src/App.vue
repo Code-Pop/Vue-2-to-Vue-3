@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <SalutationName
+      v-model:salutation="form.salutation"
+      v-model:name="form.name"
+    />
 
     <pre>{{ form }}</pre>
   </div>
