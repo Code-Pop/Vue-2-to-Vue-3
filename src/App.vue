@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <SalutationName
-      v-model:salutation.capitalize="form.salutation"
-      v-model:name.capitalize.reverse="form.name"
+      v-model:salutation="form.salutation"
+      v-model:name="form.name"
     />
 
     <pre>{{ form }}</pre>
@@ -39,6 +39,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+pre {
+  font-size: 1.5rem;
 }
 
 button,
