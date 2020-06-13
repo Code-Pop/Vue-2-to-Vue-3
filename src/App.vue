@@ -10,13 +10,23 @@
 </template>
 
 <script>
+import SalutationName from './components/SalutationName'
+import { reactive } from 'vue'
+
 export default {
   name: 'App',
   components: {
-
+    SalutationName
   },
   setup () {
+    const form = reactive({
+      salutation: '',
+      name: ''
+    })
 
+    return {
+      form
+    }
   }
 }
 </script>
