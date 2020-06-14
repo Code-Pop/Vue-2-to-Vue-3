@@ -40,14 +40,16 @@ export default {
       default: ''
     },
     salutationModifiers: {
-      default: () => ({})
+      default: () => ({}),
+      type: Object
     },
     name: {
       type: String,
       default: ''
     },
     nameModifiers: {
-      default: () => ({})
+      default: () => ({}),
+      type: Object
     }
   },
   setup (props, { emit }) {
