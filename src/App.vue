@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <BaseInput
-      v-model="name"
-      label="Name:"
+      v-model="email"
+      label="Email:"
     />
 
-    <pre>{{ name }}</pre>
+    <pre>{{ email }}</pre>
   </div>
 </template>
 
@@ -19,10 +19,10 @@ export default {
     BaseInput
   },
   setup () {
-    const name = ref('')
+    const email = ref('')
 
     return {
-      name
+      email
     }
   }
 }
