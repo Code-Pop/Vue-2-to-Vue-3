@@ -1,31 +1,28 @@
 <template>
   <div id="app">
-    <SalutationName
-      v-model:salutation.capitalize="form.salutation"
-      v-model:name.capitalize.reverse="form.name"
+    <BaseInput
+      v-model="name"
+      label="Name:"
     />
 
-    <pre>{{ form }}</pre>
+    <pre>{{ name }}</pre>
   </div>
 </template>
 
 <script>
-import { reactive } from 'vue'
-import SalutationName from './components/SalutationName'
+import { ref } from 'vue'
+import BaseInput from './components/BaseInput'
 
 export default {
   name: 'App',
   components: {
-    SalutationName
+    BaseInput
   },
   setup () {
-    const form = reactive({
-      salutation: '',
-      name: ''
-    })
+    const name = ref('')
 
     return {
-      form
+      name
     }
   }
 }
