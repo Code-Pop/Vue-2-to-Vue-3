@@ -2,14 +2,18 @@
   <div>
     <label>{{ label }}</label>
     <input
+      v-bind="{
+        ...$attrs,
+        onInput: (event) => $emit('update:modelValue', event.target.value)
+      }"
       :value="modelValue"
-      @input="$emit('update:modelValue', $event.target.value)"
     />
   </div>
 </template>
 
 <script>
 export default {
+  inheritAttrs: false,
   props: {
     modelValue: {
       type: [String, Number],
@@ -19,6 +23,9 @@ export default {
       type: String,
       default: null
     }
+  },
+  setup (props, context) {
+    console.log(context.attrs)
   }
 }
 </script>
