@@ -59,6 +59,9 @@ textarea {
   box-sizing: border-box;
   border: solid 1px rgba(0, 0, 0, 0.4);
 }
+input.thicc {
+  border-width: 4px;
+}
 textarea {
   width: 100%;
   overflow: auto;
