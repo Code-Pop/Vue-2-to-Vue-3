@@ -18,6 +18,7 @@
     <input
       :value="name"
       @input="updateName"
+      @change="updateName"
       type="text"
       name="name"
     />
@@ -66,7 +67,7 @@ export default {
         val = val.charAt(0).toUpperCase() + val.slice(1)
       }
 
-      if (props.nameModifiers.reverse) {
+      if (props.nameModifiers.reverse && event.type === 'change') {
         val = val.split('').reverse().join('')
       }
 
