@@ -1,3 +1,5 @@
+**This repository is for learning purposes only, it's not for production use.**
+
 # From Vue 2 to Vue 3
 
 ## Project setup
@@ -15,4 +17,3 @@ yarn serve
 yarn lint
 ```
 
-**This repository is for learning purposes only, it's not for production use.**
